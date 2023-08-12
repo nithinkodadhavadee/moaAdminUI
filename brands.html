@@ -553,7 +553,7 @@
                                             </thead>
     
     
-                                            <tbody>
+                                            <tbody id="brandsList">
                                             <tr>
                                             <tr>
                                                 <td>1</td>
@@ -672,6 +672,50 @@
 
 
         </div>
+
+        <script>
+            function populateList(listId, data) {
+              const list = document.getElementById(listId);
+              list.innerHTML = data.map((item, index) => `
+                                            <tr>
+                                                <td>${index+1}</td>
+                                                <td>${item.title}</td>
+                                                <td>${item.floor}</td>
+                                                <td>${item.timings}</td>
+                                                <td>
+                                                    <a href="">
+                                                        <button type="button" class="btn btn-outline-success waves-effect waves-light">
+                                                            <span class="btn-label">
+                                                                <i class="fe-edit-1"></i>
+                                                            </span>
+                                                            Edit Brand
+                                                        </button>
+                                                    </a>
+                                                </td>
+                                                <td>
+                                                    <button type="button" class="btn btn-outline-danger waves-effect waves-light">
+                                                        <span class="btn-label">
+                                                            <i class="fe-trash-2"></i>
+                                                        </span>
+                                                        Delete Brand
+                                                    </button>
+                                                </td>
+                                            </tr>`).join('');
+            }
+        
+            document.addEventListener('DOMContentLoaded', () => {
+              fetch('https://moa-admin-backend.onrender.com/brands/list')
+                .then(response => response.json())
+                .then(data => {
+                    console.log(data)
+                    console.log("got all the list of brands, now population")
+                  populateList('brandsList', data);
+                })
+                .catch(error => {
+                  console.error('Error fetching data:', error);
+                });
+            });
+          </script>
         <!-- END wrapper -->
 
         <!-- Right Sidebar -->

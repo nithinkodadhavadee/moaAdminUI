@@ -634,6 +634,8 @@
               fetch('https://moa-admin-backend.onrender.com/api/dine')
                 .then(response => response.json())
                 .then(data => {
+                    console.log(data)
+                    console.log("got all the list of dines, now population")
                   populateList('dineList', data);
                 })
                 .catch(error => {
