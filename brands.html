@@ -340,7 +340,7 @@
                                                     </a>
                                                 </td>
                                                 <td>
-                                                    <button type="button" class="btn btn-outline-danger waves-effect waves-light">
+                                                    <button type="button" onclick="deleteBrand('${item.title}')" class="btn btn-outline-danger waves-effect waves-light">
                                                         <span class="btn-label">
                                                             <i class="fe-trash-2"></i>
                                                         </span>
@@ -362,6 +362,17 @@
                   console.error('Error fetching data:', error);
                 });
             });
+
+            async function deleteBrand(title){
+                await fetch('https://moa-admin-backend.onrender.com/?module=brands&title='+title, {
+                  method: "DELETE",
+                  headers: {
+                    "Content-type": "application/json; charset=UTF-8"
+                  }
+                });
+                
+                window.location.href = "/brands.html";
+            }
           </script>
         <!-- END wrapper -->
 
