@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8" />
-        <title>Header | Adminto - Responsive Admin Dashboard Template</title>
+        <title>Offers | Adminto - Responsive Admin Dashboard Template</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
         <meta content="Coderthemes" name="author" />
@@ -47,7 +47,7 @@
                         </li>
     
                         <li>
-                            <h4 class="page-title-main">Header</h4>
+                            <h4 class="page-title-main">Offers</h4>
                         </li>
             
                     </ul>
@@ -251,92 +251,99 @@
                             <div class="col-12">
                                 <div class="card">
                                     <div class="card-body">
-                                        <h4 class="header-title">Alter Brand Contents</h4>
+                                        <h4 class="header-title">Alter Offers Contents</h4>
                                         <div class="row">
                                             <div class="col-lg-6">
-                                                <form>
+                                                <form id="brandForms">
 
         
                                                     <div class="mb-3">
                                                         <label for="example-readonly" class="form-label">Title</label>
-                                                        <input type="text" id="example-readonly" class="form-control" value="Adidas">
+                                                        <input type="text" id="title" class="form-control" value="">
                                                     </div>
 
 
                                                     <div class="mb-3">
-                                                        <label for="simpleinput" class="form-label">About</label>
-                                                        <input type="text" id="simpleinput" class="form-control">
+                                                        <label for="simpleinput" class="form-label">Description</label>
+                                                        <input type="text" id="about" class="form-control">
                                                     </div>
 
                                                     <div class="mb-3">
-                                                        <label for="simpleinput" class="form-label">Floor</label>
-                                                        <input type="text" id="simpleinput" class="form-control">
+                                                        <label for="simpleinput" class="form-label">validity</label>
+                                                        <input type="text" id="floor" class="form-control">
                                                     </div>
 
-                                                    <div class="mb-3">
-                                                        <label for="simpleinput" class="form-label">Contact</label>
-                                                        <input type="text" id="simpleinput" class="form-control">
-                                                    </div>
-
-                                                    <div class="mb-3">
-                                                        <label for="simpleinput" class="form-label">E-Mail</label>
-                                                        <input type="text" id="simpleinput" class="form-control">
-                                                    </div>
-
-                                                    <div class="mb-3">
-                                                        <label for="simpleinput" class="form-label">Timings</label>
-                                                        <input type="text" id="simpleinput" class="form-control">
-                                                    </div>
-
+                                                    <!-- <div class="mb-3">
+                                                        <label for="simpleinput" class="form-label">image</label>
+                                                        <input type="text" id="image" class="form-control">
+                                                    </div> -->
 
                                                 </form>
                                             </div> <!-- end col -->
 
-                                            <div class="col-lg-6">
-                                                <form>
-
-
-                                                    <div class="mb-3">
-                                                        <label for="example-fileinput" class="form-label">Background</label>
-                                                        <input type="file" id="example-fileinput" class="form-control">
-                                                    </div>
-                                                    
-                                                    <div class="mb-3">
-                                                        <label for="example-fileinput" class="form-label">Logo</label>
-                                                        <input type="file" id="example-fileinput" class="form-control">
-                                                    </div>
-                                                    <div class="mb-3">
-                                                        <label for="example-fileinput" class="form-label">Image 1</label>
-                                                        <input type="file" id="example-fileinput" class="form-control">
-                                                    </div>
-                                                    <div class="mb-3">
-                                                        <label for="example-fileinput" class="form-label">Image 2</label>
-                                                        <input type="file" id="example-fileinput" class="form-control">
-                                                    </div>
-                                                    <div class="mb-3">
-                                                        <label for="example-fileinput" class="form-label">Image 3</label>
-                                                        <input type="file" id="example-fileinput" class="form-control">
-                                                    </div>
-                                                    <div class="mb-3">
-                                                        <label for="example-fileinput" class="form-label">Image 4</label>
-                                                        <input type="file" id="example-fileinput" class="form-control">
-                                                    </div>
-                                                    
-        
-                                                </form>
-                                            </div> <!-- end col -->
                                         </div>
                                         <!-- end row-->
-
                                     </div> <!-- end card-body -->
                                 </div> <!-- end card -->
                             </div><!-- end col -->
                         </div>
                         <!-- end row -->
-                        <button type="button" class="btn btn-primary waves-effect waves-light">Save</button>
+                        
+
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h4 class="header-title">Alter Images</h4>
+                                        <p>
+                                            * Do not change the image link unless you have a replacement link for the image
+                                        </p>
+                                        <p id="errorMessage" style="color: red;"></p>
+                                        <div class="row">
+                                            <div class="col-lg-6">
+                                                <form id="brandForms">
+
+
+                                                    <div class="mb-3" style=" display: flex; justify-content: space-between; align-items: center;">
+                                                        <div>
+                                                            <img src="assets/images/small/img-1.jpg" id="imgBackground" alt="image" class="img-fluid rounded" width="200">
+                                                        </div>
+                                                        <div style="">
+                                                            <label for="example-readonly" class="form-label">
+                                                                Image Link
+                                                            </label>
+                                                            <input type="text" id="background" class="form-control">
+                                                        </div>
+                                                        <div style="">
+                                                            <label for="example-fileinput" class="form-label">Background</label>
+                                                            <input type="file" id="backgroundFile" class="form-control"> 
+                                                            <button type="button" class="btn btn-outline-primary waves-effect waves-light" onclick="uploadImage('backgroundFile', 'background', 'imgBackground')">Upload Image</button>
+                                                        </div>
+                                                    </div>
+
+        
+
+                                                    <!-- <div class="mb-3">
+                                                        <label for="simpleinput" class="form-label">image</label>
+                                                        <input type="text" id="image" class="form-control">
+                                                    </div> -->
+
+                                                </form>
+                                            </div> <!-- end col -->
+
+                                        </div>
+                                        
+                                        <!-- end row-->
+                                    </div> <!-- end card-body -->
+                                </div> <!-- end card -->
+                            </div><!-- end col -->
+                        </div>
+
+                        <button type="button" class="btn btn-primary waves-effect waves-light" onclick="updateBrand()">Publish</button>
                     </div>
 
 
+                    
             </div>
 
             <!-- ============================================================== -->
@@ -346,6 +353,131 @@
 
         </div>
         <!-- END wrapper -->
+
+        <script>
+
+            let params = new URLSearchParams(window.location.search);
+            let value = params.get('title');
+            console.log(value)
+            console.log("this is the title")
+            let liveUrl = "https://moa-admin-backend.onrender.com/";
+
+            async function getData(){
+                let callUrl = liveUrl+'?module=offers&title='+value+'';
+                
+                console.log(callUrl)
+
+                let brandData = await fetch(callUrl, {
+                    method: "GET" // default, so we can ignore
+                }).then((response) => response.json());
+
+                console.log("blah", brandData);
+
+
+                document.getElementById("title").value = brandData.title;
+                document.getElementById("about").value = brandData.desc;
+                document.getElementById("floor").value = brandData.validity;
+                // document.getElementById("image").value = brandData.image
+                document.getElementById("background").value = brandData.image;
+                
+                document.getElementById("imgBackground").src = brandData.image;
+            }
+            
+            getData();
+
+            async function updateBrand() {
+                brandDetails = {}
+
+                brandDetails.title = document.getElementById("title").value 
+                brandDetails.desc = document.getElementById("about").value 
+                brandDetails.validity = document.getElementById("floor").value 
+                // brandDetails.image = document.getElementById("image").value
+                brandDetails.image = document.getElementById("background").value
+               
+                console.log(brandDetails)
+
+                await fetch(liveUrl+'?module=offers', {
+                  method: "POST",
+                  body: JSON.stringify(brandDetails),
+                  headers: {
+                    "Content-type": "application/json; charset=UTF-8"
+                  }
+                });
+
+                window.location.href = "/offers.html";
+            }
+
+            async function  uploadImage(fileId, linkId, imgId){
+                const imageInput = document.getElementById(fileId);
+                if (imageInput.files.length > 0) {
+                    const file = imageInput.files[0];
+                    const base64Data = await readFileAsBase64(file);
+                
+                    // Now you can use the base64Data in your API request
+                    var myHeaders = new Headers();
+                    myHeaders.append("Authorization", "Client-ID 76fdb3b85f56701");
+
+                    var formdata = new FormData();
+                    formdata.append("image", base64Data);
+
+                    var requestOptions = {
+                      method: 'POST',
+                      headers: myHeaders,
+                      body: formdata,
+                      redirect: 'follow'
+                    };
+
+                    fetch("https://api.imgur.com/3/image", requestOptions)
+                      .then(response => response.text())
+                      .then(result => {
+                        console.log(result)
+                        if(!result.success){
+                            document.getElementById("errorMessage").innerHTML = "Image Upload Services temperately unavailable, please try again later. ";
+                        }
+                      })
+                      .catch(error => {
+                        console.log('error', error);
+                    });
+                
+                    // Here, you can make your API request with the base64Data
+                    // Example:
+                    // const response = await fetch('your-api-endpoint', {
+                    //     method: 'POST',
+                    //     headers: {
+                    //         'Content-Type': 'application/json'
+                    //     },
+                    //     body: JSON.stringify({ image: base64Data })
+                    // });
+                    // const apiResult = await response.json();
+                } else {
+                    resultDiv.textContent = 'Please select an image.';
+                }
+            }
+
+            // document.getElementById('imageForm').addEventListener('submit', async function (event) {
+            //     event.preventDefault();
+
+            //     const imageInput = document.getElementById('imageInput');
+            //     const resultDiv = document.getElementById('result');
+
+                
+            // });
+
+            function readFileAsBase64(file) {
+                return new Promise((resolve, reject) => {
+                    const reader = new FileReader();
+                    reader.readAsDataURL(file);
+                    reader.onload = () => {
+                        const base64Data = reader.result.split(',')[1];
+                        resolve(base64Data);
+                    };
+                    reader.onerror = (error) => {
+                        reject(error);
+                    };
+                });
+            }
+
+        </script>
 
         <!-- Right Sidebar -->
         <div class="right-bar">
